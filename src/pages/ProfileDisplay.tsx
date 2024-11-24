@@ -84,13 +84,13 @@ const ProfileDisplay = () => {
   };
 
   return (
-    <div className="flex justify-center md:p-10">
+    <div className="md:p-10 flex justify-center items-start">
       {loading ? (
         <p>Loading....</p>
       ) : (
         <>
           {profile ? (
-            <form className="md:w-1/2 lg:w-1/3 space-y-6 mt-10 border-2 rounded-md shadow-md p-10">
+            <form className="md:w-1/2 lg:w-1/3 space-y-6 mt-10 border-2 rounded-md shadow-md p-6 lg:p-10">
               <div className="flex items-center justify-center">
                 <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center">
                   <span className="text-slate-700 text-2xl">
@@ -147,7 +147,7 @@ const ProfileDisplay = () => {
                 />
               </div>
 
-              <div className="flex justify-between items-center gap-5">
+              <div className="flex justify-between gap-5">
                 <button
                   type="button"
                   onClick={isEditing ? handleSave : handleEdit}
@@ -168,7 +168,7 @@ const ProfileDisplay = () => {
             <div className="flex justify-center items-center">
               <Link
                 to={"/profile-form"}
-                className=" font-semibold text-base  w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none"
+                className="font-semibold text-base w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none"
               >
                 Profile not found. &nbsp;
                 <span className="text-blue-800 underline">
